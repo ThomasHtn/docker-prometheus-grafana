@@ -1,4 +1,7 @@
-**Structure du projet :**
+# Description
+The aim of this project is to monitor an application using grafana, kuma and prometheus.
+
+## Structure du projet :
 
 ```
 docker-compose-app/
@@ -28,7 +31,20 @@ docker-compose-app/
         └── datasources.yml
 ```
 
+# Run project
+```batch
+docker compose --env-file .env up --build
+```
 
-Grafana :  http://localhost:9501
-login : admin
-mdp : mon mdp
+## Grafana 
+URL :  http://localhost:9501
+Use credentials set in environment
+![image info](asset/grafana.png)
+
+## Kuma 
+URL :  http://localhost:9503
+![image info](asset/kuma-uptime.png)
+
+## Discord webhook 
+URL : Your discord webhook url
+![image info](asset/discord-alerte.png)
